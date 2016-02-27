@@ -1,0 +1,5 @@
+dist/
+lib/
+bin/
+webpack.config.js
+config/
