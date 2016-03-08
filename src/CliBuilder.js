@@ -101,6 +101,8 @@ export class Command {
                     return fn(args);
                 }
             }
+
+            return null;
         });
 
         return this;

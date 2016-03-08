@@ -1,6 +1,6 @@
 {
   "name": "cli-boilerplate",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Boilerplate for webpack build of browser application",
   "private": true,
   "repository": "git+ssh://git-codecommit.us-east-1.amazonaws.com/v1/repos/webpack-boilerplate",
