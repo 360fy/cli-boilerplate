@@ -1,1 +1,1 @@
-# cli-boilerplate
+# command-line-boilerplate

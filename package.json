@@ -1,5 +1,5 @@
 {
-  "name": "cli-boilerplate",
+  "name": "command-line-boilerplate",
   "version": "1.0.2",
   "description": "Boilerplate for webpack build of browser application",
   "scripts": {
