@@ -3,10 +3,10 @@ import Chalk from 'chalk';
 
 //import FS from 'fs';
 
-export default function () {
+export default function (noAutoHelp) {
     Commander.parse(process.argv);
 
-    if (!process.argv.slice(2).length) {
+    if (!noAutoHelp && !process.argv.slice(2).length) {
         Commander.outputHelp(Chalk.red);
     }
 }

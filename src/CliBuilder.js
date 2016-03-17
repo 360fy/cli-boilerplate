@@ -19,6 +19,7 @@ function handleCommandResponse(promise) {
 
 export class Command {
     constructor(name) {
+        this.name = name;
         this.command = Commander.command(name);
     }
 
@@ -40,6 +41,8 @@ export class Command {
         }
 
         this.command.action(args => {
+            global.currentCommand = this.name;
+
             if (!params) {
                 return handleCommandResponse(fn(args));
             }
