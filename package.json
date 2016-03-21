@@ -2,6 +2,7 @@
   "name": "command-line-boilerplate",
   "version": "1.0.2",
   "description": "Boilerplate for webpack build of browser application",
+  "repository": "git@github.com:360fy/command-line-boilerplate.git",
   "scripts": {
     "lint": "eslint ./src/",
     "clean": "rm -rf lib/",
