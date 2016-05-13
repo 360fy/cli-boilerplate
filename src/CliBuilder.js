@@ -1,5 +1,5 @@
 import Commander from 'commander';
-import Promise from 'when';
+import Promise from 'bluebird';
 import {spawn} from 'child_process';
 import {default as path, dirname} from 'path';
 import Chalk from 'chalk';
