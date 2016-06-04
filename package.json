@@ -1,6 +1,6 @@
 {
   "name": "command-line-boilerplate",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "description": "Boilerplate for webpack build of browser application",
   "repository": "git@github.com:360fy/command-line-boilerplate.git",
   "scripts": {
