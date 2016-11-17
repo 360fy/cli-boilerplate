@@ -1,7 +1,7 @@
 import Commander from 'commander';
 import Promise from 'bluebird';
 import {spawn} from 'child_process';
-import {default as path, dirname} from 'path';
+import path from 'path';
 import Chalk from 'chalk';
 import {readlinkSync as readlink} from 'graceful-readlink';
 
@@ -40,7 +40,7 @@ export class Command {
             this.command.option('--spawned', 'Indicates that process is spawned one');
         }
 
-        this.command.action(args => {
+        this.command.action((args) => {
             global.currentCommand = this.name;
 
             if (!params || !params.watch) {
@@ -58,7 +58,7 @@ export class Command {
 
                 // when symbolink is relative path
                 if (link !== executable && link.charAt(0) !== '/') {
-                    link = path.join(dirname(executable), link);
+                    link = path.join(path.dirname(executable), link);
                 }
 
                 let isJSExecutable = false;
@@ -77,13 +77,11 @@ export class Command {
                       .concat(processArgs);
 
                     proc = spawn('node', processArgs, {stdio: 'inherit', customFds: [0, 1, 2]});
+                } else if (process.platform !== 'win32') {
+                    proc = spawn(link, processArgs, {stdio: 'inherit', customFds: [0, 1, 2]});
                 } else {
-                    if (process.platform !== 'win32') {
-                        proc = spawn(link, processArgs, {stdio: 'inherit', customFds: [0, 1, 2]});
-                    } else {
-                        processArgs.unshift(link);
-                        proc = spawn(process.execPath, processArgs, {stdio: 'inherit'});
-                    }
+                    processArgs.unshift(link);
+                    proc = spawn(process.execPath, processArgs, {stdio: 'inherit'});
                 }
 
                 proc.on('close', process.exit.bind(process));
