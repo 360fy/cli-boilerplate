@@ -26,3 +26,7 @@ if (!config) {
 
 // do other tasks
 ```
+
+### More examples link
+* https://github.com/360fy/humane-pipeline/blob/master/src/CliInvoker.js
+* https://github.com/360fy/humane-discovery/blob/master/src/CliInvoker.js
