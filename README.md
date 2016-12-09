@@ -30,3 +30,4 @@ if (!config) {
 ### More examples link
 * https://github.com/360fy/humane-pipeline/blob/master/src/CliInvoker.js
 * https://github.com/360fy/humane-discovery/blob/master/src/CliInvoker.js
+* See how we can build a CLI programmatically https://github.com/360fy/humane-pipeline/blob/master/src/PipelineCliBuilder.js (also notice how we can have gcInterval and memorySize as command line args. Very convenient when running a program from global path - i.e. without `node <program>` syntax, but with `<program>` syntax)
